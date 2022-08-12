@@ -104,6 +104,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="nd3-dS-4ci">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S1t-NP-CdG">
                                 <rect key="frame" x="147.5" y="581" width="80" height="31"/>
                                 <state key="normal" title="Button"/>
@@ -115,7 +118,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zw9-hS-NWF">
                                 <rect key="frame" x="152" y="75" width="71" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🐻" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZhE-r2-Sb5">
@@ -126,14 +129,18 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6rO-nV-wlM"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ZhE-r2-Sb5" firstAttribute="centerY" secondItem="5Ln-X9-pQi" secondAttribute="centerY" id="A1l-QN-YcI"/>
                             <constraint firstItem="ZhE-r2-Sb5" firstAttribute="centerX" secondItem="6rO-nV-wlM" secondAttribute="centerX" id="I61-5b-MTm"/>
                             <constraint firstItem="6rO-nV-wlM" firstAttribute="bottom" secondItem="S1t-NP-CdG" secondAttribute="bottom" constant="55" id="JE1-EL-Sbk"/>
                             <constraint firstItem="Zw9-hS-NWF" firstAttribute="centerX" secondItem="5Ln-X9-pQi" secondAttribute="centerX" id="TeE-Dn-q92"/>
+                            <constraint firstItem="nd3-dS-4ci" firstAttribute="top" secondItem="5Ln-X9-pQi" secondAttribute="top" id="Ted-KW-hoT"/>
+                            <constraint firstAttribute="bottom" secondItem="nd3-dS-4ci" secondAttribute="bottom" id="ZgS-37-0I1"/>
+                            <constraint firstItem="nd3-dS-4ci" firstAttribute="trailing" secondItem="6rO-nV-wlM" secondAttribute="trailing" id="hkF-ph-oUo"/>
                             <constraint firstItem="Zw9-hS-NWF" firstAttribute="top" secondItem="6rO-nV-wlM" secondAttribute="top" constant="75" id="qNW-2j-1Ik"/>
                             <constraint firstItem="S1t-NP-CdG" firstAttribute="centerX" secondItem="6rO-nV-wlM" secondAttribute="centerX" id="srs-5m-5El"/>
+                            <constraint firstItem="nd3-dS-4ci" firstAttribute="leading" secondItem="6rO-nV-wlM" secondAttribute="leading" id="tM5-0y-N7M"/>
                         </constraints>
                     </view>
                     <connections>
@@ -143,7 +150,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i9O-Qt-YXV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="G9f-54-h10" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1724" y="55"/>
+            <point key="canvasLocation" x="1723.1884057971015" y="54.241071428571423"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="JnQ-lg-zIF">
@@ -165,9 +172,7 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="background" width="1242" height="2208"/>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
