@@ -15,32 +15,25 @@ class LogInViewController: UIViewController {
     
     // MARK: - Private Properties
     private let userLogin = "user"
-    private let userPassword = "password"
+    private let userPassword = "123"
     
     // MARK: - Override Methods
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         isCorrectUserLoginInfo()
+        
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
         welcomeVC.welcomeText = "Welcome, \(userLogin)!"
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super .touchesBegan(touches, with: event)
+        self.view.endEditing(true)
     }
     
     // MARK: - IBAction
-    //Переход на WelcomeViewController
-    @IBAction func signInButtonPressed() {
-    }
-    
     //Напомнить логин
     @IBAction func remindLogin() {
         let loginAlert = UIAlertController(
-            title: "Oops!",
+            title: "Login",
             message: "Your login is '\(userLogin)' 😉",
             preferredStyle: .alert
         )
@@ -52,13 +45,19 @@ class LogInViewController: UIViewController {
     //Напомнить пароль
     @IBAction func remindPassword() {
         let passwordAlert = UIAlertController(
-            title: "Oops!",
+            title: "Password",
             message: "Your password is '\(userPassword)' 😉",
             preferredStyle: .alert
         )
         passwordAlert.addAction(UIAlertAction(title: "Ok", style: .default))
         
         self.present(passwordAlert, animated: true)
+    }
+    
+    @IBAction func unwindSegue(_ segue: UIStoryboardSegue) {
+        guard let loginVC = segue.destination as? LogInViewController else { return }
+        loginVC.loginTF.text = ""
+        loginVC.passwordTF.text = ""
     }
     
     // MARK: - Private Methods
@@ -82,8 +81,6 @@ class LogInViewController: UIViewController {
                 self.present(incorrectUserLoginAlert, animated: true)
                 return
         }
-        
-        
     }
 }
 
