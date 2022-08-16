@@ -7,9 +7,9 @@
 
 import UIKit
 
-final class WelcomeViewController: UIViewController {
+final class ProfileViewController: UIViewController {
 
-// MARK: - IBOutlet
+// MARK: - IBOutlets
     @IBOutlet var welcomeLabel: UILabel!
     
 // MARK: - Public Properties
@@ -17,31 +17,32 @@ final class WelcomeViewController: UIViewController {
     
 // MARK: - Private Properties
     private let primaryColor = UIColor(
-        red: 210/255,
-        green: 110/255,
-        blue: 130/255,
+        red: 88/255,
+        green: 86/255,
+        blue: 214/255,
         alpha: 1
     )
     
     private let secondaryColor = UIColor(
-        red: 105/255,
-        green: 148/255,
-        blue: 230/255,
+        red: 255/255,
+        green: 204/255,
+        blue: 0/255,
         alpha: 1
     )
 // MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
-        welcomeLabel.text = "Welcome, \(user)"
+        welcomeLabel.text = "Добро пожаловать, \(user)"
     }
     
-// MARK: - IBAction
+// MARK: - IBActions
     
 }
 
 
-// MARK: - Set background color
+// MARK: - Extensions
+//Background color for view
 extension UIView {
     func addVerticalGradientLayer(topColor: UIColor, bottomColor: UIColor) {
         let gradient = CAGradientLayer()

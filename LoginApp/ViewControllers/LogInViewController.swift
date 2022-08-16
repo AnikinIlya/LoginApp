@@ -14,13 +14,13 @@ final class LogInViewController: UIViewController {
     @IBOutlet var passwordTF: UITextField!
     
 // MARK: - Private Properties
-    private let userLogin = "user"
-    private let userPassword = "123"
+    private let userLogin = UserData.getUsers().userLogin
+    private let userPassword = UserData.getUsers().userPassword
     
 // MARK: - Override Methods
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.user = userLogin
+        guard let welcomeVC = segue.destination as? ProfileViewController else { return }
+        welcomeVC.user = UserData.getUsers().userInfo.profileName
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
