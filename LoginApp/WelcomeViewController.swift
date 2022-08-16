@@ -7,15 +7,15 @@
 
 import UIKit
 
-class WelcomeViewController: UIViewController {
+final class WelcomeViewController: UIViewController {
 
-    // MARK: - IBOutlet
+// MARK: - IBOutlet
     @IBOutlet var welcomeLabel: UILabel!
     
-    // MARK: - Public Properties
+// MARK: - Public Properties
     var user = ""
     
-    // MARK: - Private Properties
+// MARK: - Private Properties
     private let primaryColor = UIColor(
         red: 210/255,
         green: 110/255,
@@ -29,17 +29,15 @@ class WelcomeViewController: UIViewController {
         blue: 230/255,
         alpha: 1
     )
-    // MARK: - Override Methods
+// MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
         welcomeLabel.text = "Welcome, \(user)"
     }
     
-    // MARK: - IBAction
-    @IBAction func signOutButtonPressed() {
-        dismiss(animated: true)
-    }
+// MARK: - IBAction
+    
 }
 
 
