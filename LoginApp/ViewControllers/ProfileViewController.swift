@@ -13,7 +13,7 @@ final class ProfileViewController: UIViewController {
     @IBOutlet var welcomeLabel: UILabel!
     
 // MARK: - Public Properties
-    var user = ""
+    var user: UserData!
     
 // MARK: - Private Properties
     private let primaryColor = UIColor(
@@ -29,15 +29,13 @@ final class ProfileViewController: UIViewController {
         blue: 0/255,
         alpha: 1
     )
+    
 // MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
-        welcomeLabel.text = "Добро пожаловать, \(user)"
+        welcomeLabel.text = "Welcome, \(user.userInfo.profileName)"
     }
-    
-// MARK: - IBActions
-    
 }
 
 

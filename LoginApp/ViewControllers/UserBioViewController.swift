@@ -12,6 +12,9 @@ class UserBioViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet var profileBioLabel: UILabel!
     
+    // MARK: - Public Properties
+    var user: UserData!
+    
     // MARK: - Private Properties
     private let primaryColor = UIColor(
         red: 88/255,
@@ -33,8 +36,14 @@ class UserBioViewController: UIViewController {
         
         view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
         
-        title = "\(UserData.getUsers().userInfo.profileName)  \(UserData.getUsers().userInfo.profileSurename)"
-        profileBioLabel.text = UserData.getUsers().userInfo.profileBio
+        title = "\(user.userInfo.profileName)  \(user.userInfo.profileSurename)"
+        profileBioLabel.text = user.userInfo.profileBio
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let userPicturesVC =
+                segue.destination as? UserPicturesViewController else { return }
+        userPicturesVC.user = user
     }
 }
 
