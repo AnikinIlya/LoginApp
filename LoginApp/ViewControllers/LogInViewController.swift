@@ -14,7 +14,7 @@ final class LogInViewController: UIViewController {
     @IBOutlet var passwordTF: UITextField!
     
 // MARK: - Private Properties
-    private let user = UserData.getUsersData()
+    private let user = User.getUsersData()
     
 // MARK: - Override Methods
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -39,7 +39,7 @@ final class LogInViewController: UIViewController {
 // MARK: - IBAction
     //Проверка введенных значений
     @IBAction func signInPressed() {
-        guard loginTF.text == user.userLogin, passwordTF.text == user.userPassword else {
+        guard loginTF.text == user.login, passwordTF.text == user.password else {
             showAlert(
                 title: "Oops!",
                 message: "Incorrect login or password! Please try again",
@@ -52,8 +52,8 @@ final class LogInViewController: UIViewController {
     //Алёрты с напоминанием данных
     @IBAction func remindRegisterData(_ sender: UIButton) {
         sender.tag == 0
-        ? showAlert(title: "Oops!", message: "Your name is \(user.userLogin) 😉")
-        : showAlert(title: "Oops!", message: "Your password is \(user.userPassword) 😉")
+        ? showAlert(title: "Oops!", message: "Your name is \(user.login) 😉")
+        : showAlert(title: "Oops!", message: "Your password is \(user.password) 😉")
     }
     
     @IBAction func unwindSegue(_ segue: UIStoryboardSegue) {

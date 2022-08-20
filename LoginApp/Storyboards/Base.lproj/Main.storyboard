@@ -231,10 +231,57 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="574"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="44t-AY-8SU">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="2000"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="2166.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aGH-ce-j2M">
+                                                <rect key="frame" x="16" y="8" width="343" height="457.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="aGH-ce-j2M" secondAttribute="height" multiplier="3:4" id="CsZ-6j-KNE"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p2x-y2-gYY">
+                                                <rect key="frame" x="16" y="481.5" width="343" height="457"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="p2x-y2-gYY" secondAttribute="height" multiplier="3:4" id="2L5-iG-GTe"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="puH-bU-6qp">
+                                                <rect key="frame" x="16" y="954.5" width="343" height="457.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="puH-bU-6qp" secondAttribute="height" multiplier="3:4" id="OPB-hz-bFK"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XUr-u9-71s">
+                                                <rect key="frame" x="16" y="1428" width="343" height="457.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="XUr-u9-71s" secondAttribute="height" multiplier="3:4" id="mBN-T7-PId"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bk0-r7-BHD">
+                                                <rect key="frame" x="16" y="1901.5" width="343" height="257"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="bk0-r7-BHD" secondAttribute="height" multiplier="4:3" id="bWd-IF-Cei"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="2000" id="fM1-pv-eeE"/>
+                                            <constraint firstItem="XUr-u9-71s" firstAttribute="top" secondItem="puH-bU-6qp" secondAttribute="bottom" constant="16" id="5CH-O1-AvV"/>
+                                            <constraint firstAttribute="trailing" secondItem="p2x-y2-gYY" secondAttribute="trailing" constant="16" id="6sn-sr-8FZ"/>
+                                            <constraint firstItem="bk0-r7-BHD" firstAttribute="top" secondItem="XUr-u9-71s" secondAttribute="bottom" constant="16" id="F9y-xP-Y0g"/>
+                                            <constraint firstAttribute="trailing" secondItem="bk0-r7-BHD" secondAttribute="trailing" constant="16" id="FbL-uV-qj8"/>
+                                            <constraint firstItem="bk0-r7-BHD" firstAttribute="leading" secondItem="44t-AY-8SU" secondAttribute="leading" constant="16" id="HnC-0m-ERe"/>
+                                            <constraint firstAttribute="trailing" secondItem="aGH-ce-j2M" secondAttribute="trailing" constant="16" id="L5B-f8-k3g"/>
+                                            <constraint firstItem="aGH-ce-j2M" firstAttribute="top" secondItem="44t-AY-8SU" secondAttribute="top" constant="8" id="PQG-pH-H3A"/>
+                                            <constraint firstItem="puH-bU-6qp" firstAttribute="leading" secondItem="44t-AY-8SU" secondAttribute="leading" constant="16" id="Qg6-f6-T88"/>
+                                            <constraint firstItem="XUr-u9-71s" firstAttribute="leading" secondItem="44t-AY-8SU" secondAttribute="leading" constant="16" id="RWI-K9-TeZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="XUr-u9-71s" secondAttribute="trailing" constant="16" id="TL2-ca-Shd"/>
+                                            <constraint firstAttribute="trailing" secondItem="puH-bU-6qp" secondAttribute="trailing" constant="16" id="Vb8-fZ-QdN"/>
+                                            <constraint firstItem="p2x-y2-gYY" firstAttribute="top" secondItem="aGH-ce-j2M" secondAttribute="bottom" constant="16" id="ee1-Yx-Lk5"/>
+                                            <constraint firstItem="puH-bU-6qp" firstAttribute="top" secondItem="p2x-y2-gYY" secondAttribute="bottom" constant="16" id="fxv-RV-sgD"/>
+                                            <constraint firstItem="p2x-y2-gYY" firstAttribute="leading" secondItem="44t-AY-8SU" secondAttribute="leading" constant="16" id="mmM-jl-etW"/>
+                                            <constraint firstAttribute="bottom" secondItem="bk0-r7-BHD" secondAttribute="bottom" constant="8" id="vI8-od-KaZ"/>
+                                            <constraint firstItem="aGH-ce-j2M" firstAttribute="leading" secondItem="44t-AY-8SU" secondAttribute="leading" constant="16" id="vqw-fM-G8w"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -259,6 +306,11 @@
                     <navigationItem key="navigationItem" id="kcm-dY-FlV"/>
                     <connections>
                         <outlet property="backgroundView" destination="44t-AY-8SU" id="WHA-sj-q8g"/>
+                        <outletCollection property="picturesImageViews" destination="aGH-ce-j2M" collectionClass="NSMutableArray" id="Z98-PD-vLu"/>
+                        <outletCollection property="picturesImageViews" destination="p2x-y2-gYY" collectionClass="NSMutableArray" id="diN-hM-AGk"/>
+                        <outletCollection property="picturesImageViews" destination="puH-bU-6qp" collectionClass="NSMutableArray" id="hH7-eU-BpD"/>
+                        <outletCollection property="picturesImageViews" destination="XUr-u9-71s" collectionClass="NSMutableArray" id="Ybd-Vx-D7y"/>
+                        <outletCollection property="picturesImageViews" destination="bk0-r7-BHD" collectionClass="NSMutableArray" id="wuj-3t-Uee"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ftP-Pf-EsU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
