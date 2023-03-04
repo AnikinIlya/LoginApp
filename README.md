@@ -9,7 +9,7 @@
 Для хранения имени пользователя, пароля и прочей информации, которая должна отображаться на экране, нужно создать модель данных.
 Используя UITabBarController сделайте еще несколько экранов с интересной информацией о вас и о ваших увлечениях.
 
-### Суть домашего задания:
+### Научился:
 - MVC
 - UIAllertController
 - Navigation Controller
@@ -28,7 +28,7 @@ When returning to the first screen, the data in the text fields must be cleared.
 To store the username, password, and other information that should be displayed on the screen, you need to create a data model.
 Using UITabBarController make some more screens with interesting information about you and your hobbies.
 
-### Essence of homework:
+### Learned:
 - MVC
 - UIAllertController
 - Navigation Controller
